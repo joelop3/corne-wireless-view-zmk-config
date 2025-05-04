@@ -30,6 +30,18 @@
             flavor = "tap-preferred";
             retro-tap;
         };
+
+        kp2kp: kp2kp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "KP2KP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            retro-tap;
+        };
     };
 
     keymap {
