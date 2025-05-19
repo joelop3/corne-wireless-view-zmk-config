@@ -29,6 +29,7 @@
             quick-tap-ms = <150>;
             flavor = "balanced";
             retro-tap;
+            hold-while-undecided;
         };
 
         kp2kp: kp2kp {
