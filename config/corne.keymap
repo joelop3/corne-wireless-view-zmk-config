@@ -9,14 +9,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        function {
-            bindings = <&to 3>;
-            key-positions = <37 40>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     behaviors {
         mo2kp: mo2kp {
@@ -57,10 +50,10 @@
 
             display-name = "default";
             bindings = <
-&kp ESC    &kp Q  &kp W  &kp E         &kp R            &kp T                &kp Y                    &kp U           &kp I               &kp O    &kp P     &kp BSPC
-&kp TAB    &kp A  &kp S  &kp D         &kp F            &kp G                &kp H                    &kp J           &kp K               &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C         &kp V            &kp B                &kp N                    &kp M           &kp COMMA           &kp DOT  &kp FSLH  &kp RSHIFT
-                         &kp LEFT_GUI  &mt LCTRL ENTER  &mo2kp 2 LEFT_GUI    &mt RIGHT_CONTROL SPACE  &mo2kp 1 SPACE  &mo2kp 2 RIGHT_ALT
+&kp ESC    &kp Q  &kp W  &kp E         &kp R           &kp T                    &kp Y  &kp U           &kp I          &kp O    &kp P     &kp BSPC
+&kp TAB    &kp A  &kp S  &kp D         &kp F           &kp G                    &kp H  &kp J           &kp K          &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z  &kp X  &kp C         &kp V           &kp B                    &kp N  &kp M           &kp COMMA      &kp DOT  &kp FSLH  &kp RSHIFT
+                         &kp LEFT_GUI  &mo2kp 2 ENTER  &mo2kp 2 LEFT_CONTROL    &to 3  &mo2kp 1 SPACE  &kp RIGHT_ALT
             >;
         };
 
@@ -101,7 +94,7 @@
 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5          &kp F6        &kp F7        &kp F8        &kp F9        &kp F10       &kp F11       &kp F12
 &trans  &kp N1  &kp N2  &kp N3  &kp N4          &kp N5        &kp N6        &kp N7        &kp N8        &kp N9        &kp N0        &kp N9
 &trans  &trans  &trans  &trans  &bt BT_CLR_ALL  &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
-                        &trans  &to 0           &trans        &trans        &to 0         &trans
+                        &trans  &to 0           &trans        &to 0         &to 0         &trans
             >;
 
             label = "function";
