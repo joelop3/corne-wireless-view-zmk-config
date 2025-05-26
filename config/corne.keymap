@@ -55,7 +55,7 @@
             // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
-            display-name = "Base";
+            display-name = "default";
             bindings = <
 &kp ESC    &kp Q  &kp W  &kp E         &kp R            &kp T                &kp Y                    &kp U           &kp I               &kp O    &kp P     &kp BSPC
 &kp TAB    &kp A  &kp S  &kp D         &kp F            &kp G                &kp H                    &kp J           &kp K               &kp L    &kp SEMI  &kp SQT
@@ -71,12 +71,12 @@
             // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
-            display-name = "lower";
+            display-name = "navigation";
             bindings = <
-&trans       &trans  &kp N7  &kp N8  &kp N9  &trans    &kp PG_UP  &kp HOME        &kp UP          &kp END    &trans  &kp DELETE
-&kp LS(TAB)  &trans  &kp N4  &kp N5  &kp N6  &trans    &kp PG_DN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans  &kp DOUBLE_QUOTES
-&trans       &trans  &kp N1  &kp N2  &kp N3  &trans    &trans     &trans          &trans          &trans     &trans  &trans
-                             &kp N0  &trans  &trans    &trans     &trans          &trans
+&trans       &trans  &trans  &trans  &trans  &trans    &kp PG_UP  &kp HOME        &kp UP          &kp END    &trans  &kp DELETE
+&kp LS(TAB)  &trans  &trans  &trans  &trans  &trans    &kp PG_DN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans  &kp DOUBLE_QUOTES
+&trans       &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6     &kp N7          &kp N8          &kp N9     &kp N0  &trans
+                             &trans  &trans  &trans    &trans     &trans          &trans
             >;
         };
 
@@ -87,11 +87,11 @@
             // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
-            display-name = "raise";
+            display-name = "symbol";
             bindings = <
-&trans  &kp EXCL              &kp AT                 &kp HASH        &kp DOLLAR       &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp PIPE  &trans         &trans
-&trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp MINUS      &kp PLUS   &kp EQUAL      &kp UNDER     &trans    &trans         &kp GRAVE
-&trans  &kp LESS_THAN         &kp GREATER_THAN       &kp LBKT        &kp RBKT         &trans         &trans     &trans         &trans        &trans    &kp BACKSLASH  &kp TILDE
+&trans  &kp EXCL              &kp AT                 &kp HASH        &kp DOLLAR       &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp PIPE   &trans         &trans
+&trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp TILDE      &kp EQUAL  &kp PLUS       &kp MINUS     &kp UNDER  &trans         &kp GRAVE
+&trans  &kp LESS_THAN         &kp GREATER_THAN       &kp LBKT        &kp RBKT         &trans         &trans     &trans         &trans        &trans     &kp BACKSLASH  &trans
                                                      &trans          &trans           &trans         &trans     &trans         &trans
             >;
         };
@@ -103,6 +103,8 @@
 &trans  &trans  &trans  &trans  &bt BT_CLR_ALL  &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
                         &trans  &to 0           &trans        &trans        &to 0         &trans
             >;
+
+            label = "function";
         };
     };
 };
